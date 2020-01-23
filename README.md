@@ -10,7 +10,7 @@ This workshop aims to help you understand:
 
 _Some other things you will need to know about before you start (with resources if you need to refresh your memory):_
 
-- If you're unclear on testing with tape, revise what you've looked at earlier this week
+- If you're unclear on testing with Jest, revise what you've looked at earlier this week
 - The difference between [global and local variable scope](https://docs.microsoft.com/en-us/scripting/javascript/advanced/variable-scope-javascript)
 - [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) - review the Free Code Camp exercise [here](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/use-the-map-method-to-extract-data-from-an-array/)
 - [Math.Random()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
@@ -181,20 +181,12 @@ impureUpdateDom();
 Here's what our tests might look like:
 
 ```js
-test("visionChange correctly switches boolean", function(t) {
-  var actual = visionChange(true);
-  var expected = false;
-
-  t.equal(actual, expected, "Should return false when given true");
-  t.end();
+test("visionChange correctly switches boolean", function() {
+  expect(visionChange(true)).toBeFalsy();
 });
 
-test("updateDom returns correct type", function(t) {
-  var actual = typeof updateDom(true);
-  var expected = "function";
-
-  t.equal(actual, expected, "Should return a function");
-  t.end();
+test("updateDom returns correct type", function() {
+  expect(typeof updateDom(true)).toBe('function');
 });
 ```
 
