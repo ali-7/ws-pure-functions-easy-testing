@@ -1,6 +1,6 @@
 const { addOne, timesTwo, incrementArray, addNumberArray, incrementObject, constantNumber, constantArray, constantObject } = require('../exercises/exercise1.js');
 
-test('Refactor our addOne function so it is pure.', function() {
+test('Refactor our addOne function so it is pure.', function () {
   expect(addOne(constantNumber)).toBe(6);
   expect(constantNumber).toBe(5);
   expect(addOne(constantNumber)).toBe(6);
@@ -10,7 +10,7 @@ test('Refactor our addOne function so it is pure.', function() {
   expect(addOne(78)).toBe(79);
 })
 
-test('Refactor our timesTwo function so it is pure.', function() {
+test('Refactor our timesTwo function so it is pure.', function () {
   expect(timesTwo(constantNumber)).toBe(10);
   expect(constantNumber).toBe(5);
   expect(timesTwo(constantNumber)).toBe(10);
@@ -20,7 +20,7 @@ test('Refactor our timesTwo function so it is pure.', function() {
   expect(timesTwo(23)).toBe(46);
 })
 
-test('Refactor our incrementArray function so it is pure.', function() {
+test('Refactor our incrementArray function so it is pure.', function () {
   expect(incrementArray(constantArray)).toEqual([6, 8, 24, 5]);
   expect(constantArray).toEqual([5, 7, 23, 4]);
   expect(incrementArray(constantArray)).toEqual([6, 8, 24, 5]);
@@ -29,7 +29,7 @@ test('Refactor our incrementArray function so it is pure.', function() {
   expect(incrementArray([1])).toEqual([2]);
 })
 
-test('Refactor our addNumberArray function so it is pure.', function() {
+test('Refactor our addNumberArray function so it is pure.', function () {
   expect(addNumberArray(constantArray, constantNumber)).toEqual([5, 7, 23, 4, 5]);
   expect(constantArray).toEqual([5, 7, 23, 4]);
   expect(addNumberArray(constantArray, constantNumber)).toEqual([5, 7, 23, 4, 5]);
@@ -37,7 +37,7 @@ test('Refactor our addNumberArray function so it is pure.', function() {
   expect(addNumberArray([2], 5)).toEqual([2, 5]);
 })
 
-test('Refactor our incrementObject function so it is pure', function() {
+test('Refactor our incrementObject function so it is pure', function () {
   var expected = {
     "a": 6,
     "b": 3,
