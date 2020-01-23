@@ -6,9 +6,7 @@
   "directories": {
     "test": "test"
   },
-  "scripts": {
-    "test": "node ./test/exercise1.test.js | tap-spec"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jwhiles/pure-functions-easy-testing.git"
@@ -20,7 +18,6 @@
   },
   "homepage": "https://github.com/Jwhiles/pure-functions-easy-testing#readme",
   "devDependencies": {
-    "tap-spec": "^4.1.2",
-    "tape": "^4.10.1"
+    "jest": "^25.1.0"
   }
 }
