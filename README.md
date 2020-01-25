@@ -149,11 +149,7 @@ Can you see what each functions return? How might you test the functions?
 
 ```js
 function visionChange(changeTransition) {
-  if (changeTransition) {
-    return false;
-  } else {
-    return true;
-  }
+  return !changeTransition
 }
 
 function updateDom(changeTransition) {
@@ -199,7 +195,7 @@ Before you start the exercises, please look at this [example](https://github.com
 In these exercises, you have a number of impure functions and a number of failing tests. Your task is to rewrite the functions (and not the tests!) to make sure that the tests pass and the functions are pure.
 
 - clone this repo and run `npm install`
-- if you wish to automatically re-run your tests when you save, search about how to run jest in watch mode:
+- if you wish to automatically re-run your tests when you save, search about how to run jest in watch mode.
 - run the tests using `npm test` (don't worry about the package-lock.json notice)
 - look at the passing and failing tests
 - open `exercises/exercise1.js`
