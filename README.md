@@ -119,7 +119,7 @@ Most programs we want to write wouldn't work if we completely disallowed side ef
 
 In this example, we have a function that toggles the opacity of an image (when the opacity is 0, it cannot be seen). Once the function is called, if the image is visible, it becomes invisible, but if it is already invisible, it instead becomes visible.
 
-In the first version below, the function takes no arguments, alters the DOM after checking the global variable `changeTransition`, then changes the the global variable `changeTransition`.
+In the first version below, the function takes no arguments, alters the DOM after checking the global variable `changeTransition`, then changes the global variable `changeTransition`.
 
 ```js
 var changeTransition = true;
@@ -149,7 +149,11 @@ Can you see what each functions return? How might you test the functions?
 
 ```js
 function visionChange(changeTransition) {
-  return !changeTransition
+  if (changeTransition) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 function updateDom(changeTransition) {
@@ -170,7 +174,7 @@ var impureUpdateDom = updateDom(visionChange(changeTransition));
 impureUpdateDom();
 ```
 
-`changeTransition()` returns either `true` or `false`, and we can test whether the function returns the expected boolean case.
+`visionChange()` returns either `true` or `false`, and we can test whether the function returns the expected boolean case.
 
 `updateDOM` returns a function which is impure (because it changes the DOM). We can test that the returned output is indeed a function.
 
